@@ -23,7 +23,7 @@ memiliki_cacat = input("Apakah Anda memiliki cacat anggota tubuh? (ya/tidak): ")
 
   
 if jenis_kelamin == 'perempuan':
-        if 45 >= berat_badan <= 50 and tinggi_badan >= 165 and usia < 20 and memiliki_cacat == 'tidak'and nilai_akademis > 90 and memiliki_skill=='ya':
+        if berat_badan >=45 and berat_badan <= 50 and tinggi_badan >= 165 and usia < 20 and memiliki_cacat == 'tidak'and nilai_akademis > 90 and memiliki_skill=='ya':
            print(" Keputusan : Anda layak menjadi anggota Organisasi X.")   
         else:
            print(" Keputusan : Maaf, Anda tidak layak menjadi anggota Organisasi X.")
