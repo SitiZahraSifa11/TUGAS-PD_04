@@ -21,14 +21,17 @@ nilai_akademis = float(input("Nilai akademis (jika ada, jika tidak ada masukkan 
 memiliki_skill = input("Apakah Anda memiliki skill menembak, memanah, atau berkuda? (ya/tidak): ").lower()
 memiliki_cacat = input("Apakah Anda memiliki cacat anggota tubuh? (ya/tidak): ").lower()
 
-  
-if jenis_kelamin == 'perempuan':
-        if berat_badan >=45 and berat_badan <= 50 and tinggi_badan >= 165 and usia < 20 and memiliki_cacat == 'tidak'and nilai_akademis > 90 and memiliki_skill=='ya':
-           print(" Keputusan : Anda layak menjadi anggota Organisasi X.")   
-        else:
-           print(" Keputusan : Maaf, Anda tidak layak menjadi anggota Organisasi X.")
-elif jenis_kelamin == 'laki-laki':
-        if berat_badan <= 70 and tinggi_badan >= 170 and usia <= 25 and memiliki_cacat == 'tidak' and nilai_akademis > 90 and memiliki_skill=='ya':
-           print(" Keputusan : Anda layak menjadi anggota Organisasi X.")
-        else:
-           print(" Keputusan : Maaf, Anda tidak layak menjadi anggota Organisasi X.")
+
+if memiliki_cacat == "ya":
+    print("Keputusan : Maaf, Anda tidak layak menjadi anggota Organisasi X.")
+elif jenis_kelamin == "perempuan" and berat_badan >= 45 and berat_badan <= 50 and tinggi_badan >= 165 and usia < 20:
+    print("Keputusan : Anda layak menjadi anggota Organisasi X.")
+elif jenis_kelamin == "laki-laki" and berat_badan <= 70 and tinggi_badan >= 170 and usia <= 25:
+    print("Keputusan : Anda layak menjadi anggota Organisasi X.")
+elif jenis_kelamin == "laki-laki" or jenis_kelamin == "perempuan" and nilai_akademis >= 90 and usia <= 30:
+    print("Keputusan : Anda layak menjadi anggota Organisasi X.")
+elif jenis_kelamin == "laki-laki" or jenis_kelamin == "perempuan" and memiliki_skill == "ya":
+    print("Keputusan : Anda layak menjadi anggota Organisasi X.")
+else:
+    print("Keputusan : Maaf, Anda tidak layak menjadi anggota Organisasi X.") 
+
